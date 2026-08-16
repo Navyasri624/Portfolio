@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navya Sri Chode | Generative AI Engineer & Python Developer</title>
+  <meta name="description" content="Portfolio of Navya Sri Chode, a Generative AI Engineer and Python Developer focused on LLMs, RAG, LangChain, and AI‑powered solutions." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Navya Sri Chode | Generative AI Engineer & Python Developer" />
+  <meta property="og:description" content="Portfolio of Navya Sri Chode, a Generative AI Engineer and Python Developer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://navyasri-portfolio.com" />
+  <meta property="og:image" content="./images/hero.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Navya Sri Chode | Generative AI Engineer & Python Developer" />
+  <meta name="twitter:description" content="Portfolio of Navya Sri Chode, a Generative AI Engineer and Python Developer." />
+  <meta name="twitter:image" content="./images/hero.png" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap" rel="stylesheet" />
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            background: '#0B1120',
+            primary: '#4F46E5',
+            secondary: '#7C3AED',
+            accent: '#06B6D4',
+            muted: '#94A3B8',
+            glass: 'rgba(255,255,255,0.08)',
+            border: 'rgba(255,255,255,0.12)'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            code: ['Fira Code', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="bg-background text-white font-sans overflow-x-hidden">
+  <!-- Navbar -->
+  <header id="navbar" class="fixed inset-x-0 top-0 z-50 backdrop-blur-lg bg-glass border-b border-border transition-all duration-300">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center space-x-2">
+        <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        <span class="text-xl font-bold text-primary">Navya Sri</span>
+      </div>
+      <ul class="hidden md:flex space-x-6 text-sm font-medium">
+        <li><a href="#hero" class="nav-link hover:text-primary transition-colors">Home</a></li>
+        <li><a href="#about" class="nav-link hover:text-primary transition-colors">About</a></li>
+        <li><a href="#skills" class="nav-link hover:text-primary transition-colors">Skills</a></li>
+        <li><a href="#internships" class="nav-link hover:text-primary transition-colors">Internships</a></li>
+        <li><a href="#projects" class="nav-link hover:text-primary transition-colors">Projects</a></li>
+        <li><a href="#certifications" class="nav-link hover:text-primary transition-colors">Certifications</a></li>
+        <li><a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a></li>
+      </ul>
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-glass border-t border-border">
+      <ul class="flex flex-col space-y-4 p-4 text-sm font-medium">
+        <li><a href="#hero" class="mobile-link hover:text-primary transition-colors">Home</a></li>
+        <li><a href="#about" class="mobile-link hover:text-primary transition-colors">About</a></li>
+        <li><a href="#skills" class="mobile-link hover:text-primary transition-colors">Skills</a></li>
+        <li><a href="#internships" class="mobile-link hover:text-primary transition-colors">Internships</a></li>
+        <li><a href="#projects" class="mobile-link hover:text-primary transition-colors">Projects</a></li>
+        <li><a href="#certifications" class="mobile-link hover:text-primary transition-colors">Certifications</a></li>
+        <li><a href="#contact" class="mobile-link hover:text-primary transition-colors">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative flex items-center min-h-screen pt-20 pb-12 bg-gradient-to-b from-background to-[#0F1A30] overflow-hidden">
+    <!-- Three.js Background Canvas -->
+    <canvas id="hero-canvas" class="absolute inset-0 -z-10"></canvas>
+    <div class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-12">
+      <!-- Left Text -->
+      <div class="text-center lg:text-left max-w-xl space-y-6" data-scroll>
+        <p class="text-muted text-lg uppercase tracking-wider">Hi, I'm</p>
+        <h1 class="text-5xl md:text-6xl font-bold text-white">Navya Sri Chode</h1>
+        <h2 class="text-3xl md:text-4xl font-medium text-primary mt-2" id="typing"></h2>
+        
+<p class="text-lg text-muted max-w-md mx-auto lg:mx-0">Generative AI Engineer and Python Developer passionate about building intelligent applications using LLMs, RAG pipelines, LangChain, and AI‑powered solutions.</p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center lg:justify-start">
+          <a href="#projects" class="px-6 py-3 bg-primary text-white rounded-full shadow-lg hover:bg-primary/80 transition transform hover:scale-105">View Projects</a>
+          <a href="./resume.pdf" download class="px-6 py-3 bg-glass text-white border border-border rounded-full hover:bg-glass/50 transition">Download Resume</a>
+          <a href="#contact" class="px-6 py-3 bg-transparent text-muted border border-muted rounded-full hover:border-primary hover:text-primary transition">Contact Me</a>
+        </div>
+      </div>
+      <!-- Right Floating Icons -->
+      <div class="relative w-full max-w-lg" data-scroll>
+    <div class="flex items-center justify-center">
+      <img src="./ChatGPT Image Aug 16, 2026, 01_51_34 PM.png" alt="Navya Sri Photo" class="hero-photo rounded-lg shadow-lg max-w-xs"/>
+    </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-20 bg-background text-white" data-scroll>
+    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-bold text-primary mb-6">About Me</h2>
+        <p class="text-lg text-muted max-w-prose">
+          I am a passionate Generative AI Engineer and Python Developer eager to build scalable AI solutions, intelligent automation systems, and data‑driven applications. As a fresh graduate, I have hands‑on experience through academic projects and virtual internships that focus on LLMs, RAG pipelines, LangChain, and full‑stack development with Django.
+        </p>
+      </div>
+      <div class="grid gap-4">
+        <!-- Education Card -->
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border">
+          <h3 class="text-xl font-semibold text-primary mb-2">Master of Computer Applications</h3>
+          <p class="text-muted">Aditya College of Engineering & Technology</p>
+          <p class="text-muted">CGPA: 8.4 • 2023‑2025</p>
+        </div>
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border">
+          <h3 class="text-xl font-semibold text-primary mb-2">B.Sc Computer Science</h3>
+          <p class="text-muted">Sathabdhi Degree College</p>
+          <p class="text-muted">CGPA: 7.2 • 2018‑2021</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="py-20 bg-background text-white" data-scroll>
+    <div class="container mx-auto px-6 lg:px-12">
+      <h2 class="text-4xl font-bold text-primary mb-12 text-center">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Skill Card Template -->
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border transition-transform hover:scale-105">
+          <h3 class="text-xl font-semibold text-white mb-2">Generative AI</h3>
+          <ul class="list-disc list-inside text-muted space-y-1">
+            <li>LLMs</li>
+            <li>RAG</li>
+            <li>LangChain</li>
+            <li>LangGraph</li>
+            <li>Prompt Engineering</li>
+            <li>Embeddings</li>
+            <li>Web Scraping</li>
+          </ul>
+        </div>
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border transition-transform hover:scale-105">
+          <h3 class="text-xl font-semibold text-white mb-2">Programming</h3>
+          <ul class="list-disc list-inside text-muted space-y-1">
+            <li>Python</li>
+          </ul>
+        </div>
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border transition-transform hover:scale-105">
+          <h3 class="text-xl font-semibold text-white mb-2">Frameworks</h3>
+          <ul class="list-disc list-inside text-muted space-y-1">
+            <li>Django</li>
+            <li>LangChain</li>
+            <li>LangGraph</li>
+          </ul>
+        </div>
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border transition-transform hover:scale-105">
+          <h3 class="text-xl font-semibold text-white mb-2">Database</h3>
+          <ul class="list-disc list-inside text-muted space-y-1">
+            <li>Oracle SQL</li>
+          </ul>
+        </div>
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border transition-transform hover:scale-105">
+          <h3 class="text-xl font-semibold text-white mb-2">Web Technologies</h3>
+          <ul class="list-disc list-inside text-muted space-y-1">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Bootstrap</li>
+          </ul>
+        </div>
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border transition-transform hover:scale-105">
+          <h3 class="text-xl font-semibold text-white mb-2">Tools</h3>
+          <ul class="list-disc list-inside text-muted space-y-1">
+            <li>GitHub</li>
+            <li>VS Code</li>
+            <li>Jupyter</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERNSHIPS SECTION -->
+  <section id="internships" class="py-20 bg-background text-white" data-scroll>
+    <div class="container mx-auto px-6 lg:px-12">
+      <h2 class="text-4xl font-bold text-primary mb-12 text-center">Internships</h2>
+      <div class="space-y-8">
+        <!-- Internship Card -->
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border">
+          <h3 class="text-2xl font-semibold text-primary mb-2">Data Analytics Intern</h3>
+          <p class="text-muted italic mb-2">Deloitte Australia — Forage Virtual Internship (July 2025)</p>
+          <ul class="list-disc list-inside text-muted space-y-1">
+            <li>Conducted data cleaning, analysis, and interpretation to derive business insights.</li>
+            <li>Developed analytical reports and visualizations for stakeholder decision‑making.</li>
+          </ul>
+        </div>
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border">
+          <h3 class="text-2xl font-semibold text-primary mb-2">Web Development Intern</h3>
+          <p class="text-muted italic mb-2">Octanet Services Pvt. Ltd. — Virtual Internship (Oct 2024)</p>
+          <ul class="list-disc list-inside text-muted space-y-1">
+            <li>Created responsive web pages using HTML, CSS, and JavaScript.</li>
+            <li>Collaborated on frontend features and performed performance optimizations.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="py-20 bg-background text-white" data-scroll>
+    <div class="container mx-auto px-6 lg:px-12">
+      <h2 class="text-4xl font-bold text-primary mb-12 text-center">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project Card -->
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border hover:shadow-2xl transition-shadow">
+          <h3 class="text-2xl font-semibold text-primary mb-2">Personal AI Chatbot</h3>
+          <p class="text-muted italic mb-2">Generative AI / LLM / RAG</p>
+          <p class="text-muted mb-4">A chatbot that answers queries from PDFs, web links, and plain text using LangChain, web‑scraping, and PDF parsing pipelines.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-primary/20 text-primary text-xs px-2 py-1 rounded">Python</span>
+            <span class="bg-primary/20 text-primary text-xs px-2 py-1 rounded">LangChain</span>
+            <span class="bg-primary/20 text-primary text-xs px-2 py-1 rounded">LLMs</span>
+            <span class="bg-primary/20 text-primary text-xs px-2 py-1 rounded">RAG</span>
+            <span class="bg-primary/20 text-primary text-xs px-2 py-1 rounded">Web Scraping</span>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="px-4 py-2 bg-primary text-white rounded hover:bg-primary/80 transition">GitHub</a>
+            <a href="#" class="px-4 py-2 bg-glass text-white border border-border rounded hover:bg-glass/50 transition">Live Demo</a>
+          </div>
+        </div>
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border hover:shadow-2xl transition-shadow">
+          <h3 class="text-2xl font-semibold text-primary mb-2">Digital Cheque Fraud Detection</h3>
+          <p class="text-muted italic mb-2">Deep Learning / AI / Django</p>
+          <p class="text-muted mb-4">An intelligent system that verifies digital cheque signatures using CNNs (ResNet‑50) and provides real‑time fraud detection.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-primary/20 text-primary text-xs px-2 py-1 rounded">Python</span>
+            <span class="bg-primary/20 text-primary text-xs px-2 py-1 rounded">Django</span>
+            <span class="bg-primary/20 text-primary text-xs px-2 py-1 rounded">CNN</span>
+            <span class="bg-primary/20 text-primary text-xs px-2 py-1 rounded">ResNet‑50</span>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="px-4 py-2 bg-primary text-white rounded hover:bg-primary/80 transition">GitHub</a>
+            <a href="#" class="px-4 py-2 bg-glass text-white border border-border rounded hover:bg-glass/50 transition">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS SECTION -->
+  <section id="certifications" class="py-20 bg-background text-white" data-scroll>
+    <div class="container mx-auto px-6 lg:px-12">
+      <h2 class="text-4xl font-bold text-primary mb-12 text-center">Certifications</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border">
+          <h3 class="text-2xl font-semibold text-primary mb-2">Python 101 for Data Science</h3>
+          <p class="text-muted italic">IBM Cognitive Class</p>
+        </div>
+        <div class="bg-glass p-6 rounded-xl shadow-lg border border-border">
+          <h3 class="text-2xl font-semibold text-primary mb-2">Generative AI</h3>
+          <p class="text-muted italic">Simplilearn</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-20 bg-background text-white" data-scroll>
+    <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <h2 class="text-4xl font-bold text-primary mb-6">Let's Build Something Intelligent</h2>
+        <p class="text-lg text-muted mb-8 max-w-prose">
+          I’m excited to collaborate on AI‑driven projects or discuss entry‑level opportunities. Feel free to reach out via the form or any of the channels below.
+        </p>
+        <form id="contact-form" class="space-y-4">
+          <input type="text" name="name" placeholder="Name" required class="w-full p-3 bg-glass rounded border border-border text-white focus:outline-none focus:ring-2 focus:ring-primary" />
+          <input type="email" name="email" placeholder="Email" required class="w-full p-3 bg-glass rounded border border-border text-white focus:outline-none focus:ring-2 focus:ring-primary" />
+          <input type="text" name="subject" placeholder="Subject" required class="w-full p-3 bg-glass rounded border border-border text-white focus:outline-none focus:ring-2 focus:ring-primary" />
+          <textarea name="message" rows="5" placeholder="Message" required class="w-full p-3 bg-glass rounded border border-border text-white focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+          <button type="submit" class="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/80 transition transform hover:scale-105">Send Message</button>
+        </form>
+      </div>
+      <div class="bg-glass p-6 rounded-xl shadow-lg border border-border space-y-4">
+        <p class="flex items-center gap-2"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l11.985-8.713h-23.97l11.985 8.713zm0 2.574l-12-8.713v13.426c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-13.426l-12 8.713z"/></svg><a href="mailto:navyasrichode@gmail.com" class="text-white hover:underline">navyasrichode@gmail.com</a></p>
+        <p class="flex items-center gap-2"><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.5-.645-1.5-1.447 0-.813.549-1.447 1.512-1.447.962 0 1.5.634 1.5 1.447 0 .802-.538 1.447-1.512 1.447zm13.5 11.268h-3v-5.604c0-1.335-.025-3.056-1.861-3.056-1.862 0-2.148 1.452-2.148 2.955v5.705h-3v-10h2.881v1.368h.041c.402-.761 1.384-1.562 2.851-1.562 3.045 0 3.606 2.003 3.606 4.609v5.585z"/></svg><a href="https://www.linkedin.com/in/navyasrichode" target="_blank" class="text-white hover:underline">LinkedIn</a></p>
+        <p class="flex items-center gap-2"><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><a href="https://github.com/Navyasri624" target="_blank" class="text-white hover:underline">GitHub</a></p>
+        <p class="flex items-center gap-2"><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.99 3.66 9.12 8.44 9.88v-6.99H8.9v-2.89h1.54V9.41c0-1.5.9-2.34 2.27-2.34.66 0 1.31.12 1.31.12v1.44h-.74c-.73 0-.96.46-.96 1.12v1.35h1.64l-.26 1.86h-1.38V22C18.34 21.12 22 16.99 22 12c0-5.52-4.48-10-10-10z"/></svg>India, Andhra Pradesh</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 bg-[#0B1120] text-muted text-center relative">
+    <div class="container mx-auto px-6 lg:px-12">
+      <p class="mb-4"><span class="text-primary font-semibold">Navya Sri</span> © 2026. All rights reserved.</p>
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://www.linkedin.com/in/navyasrichode" target="_blank" class="hover:text-primary transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.5-.645-1.5-1.447 0-.813.549-1.447 1.512-1.447.962 0 1.5.634 1.5 1.447 0 .802-.538 1.447-1.512 1.447zm13.5 11.268h-3v-5.604c0-1.335-.025-3.056-1.861-3.056-1.862 0-2.148 1.452-2.148 2.955v5.705h-3v-10h2.881v1.368h.041c.402-.761 1.384-1.562 2.851-1.562 3.045 0 3.606 2.003 3.606 4.609v5.585z"/></svg></a>
+        <a href="mailto:navyasrichode@gmail.com" class="hover:text-primary transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l11.985-8.713h-23.97l11.985 8.713zm0 2.574l-12-8.713v13.426c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-13.426l-12 8.713z"/></svg></a>
+      </div>
+      <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/80 transition hidden">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
